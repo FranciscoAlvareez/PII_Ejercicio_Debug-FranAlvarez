@@ -7,32 +7,33 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}",
+                "${workspaceFolder}/PII_Full_GRASP_and_SOLID_1_Start/src/Program/Program.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "clean",
+            "label": "publish",
             "command": "dotnet",
             "type": "process",
             "args": [
-                "clean",
-                "${workspaceFolder}"
+                "publish",
+                "${workspaceFolder}/PII_Full_GRASP_and_SOLID_1_Start/src/Program/Program.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "test",
+            "label": "watch",
             "command": "dotnet",
             "type": "process",
             "args": [
-                "test",
-                "${workspaceFolder}/tests/Library.Tests.csproj",
-                "/p:CollectCoverage=true",
-                "/p:CoverletOutputFormat=lcov",
-                "/p:CoverletOutput=lcov.info"
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/PII_Full_GRASP_and_SOLID_1_Start/src/Program/Program.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
